@@ -36,6 +36,22 @@ routes.get( '/tweets', ( req, res ) => {
     return res.send(lastTen)
 })
 
+routes.get("/tweets/:username", (req, res) => {
+    const {username} = req.params
+    avatar = users.find( element => element.username === username ).avatar
+
+    const tweetsUser = tweets.map(e => {
+        if(e.username === username){
+            const tweet = e.tweet
+            return{ username, avatar, tweet}
+        }
+    })
+
+    console.log(tweetsUser)
+    
+    return res.send(tweetsUser)
+})
+
 
 export {
     routes, 
