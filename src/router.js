@@ -15,9 +15,14 @@ routes.post('/sign-up', (req, res) => {
 
 routes.post('/tweets', (req,res) => {
     username = req.body.username
-    if(!users.find( element => {
+
+    const isLogged = users.find( element => 
         element.username === username
-    })) {
+    )
+
+    console.log(isLogged)
+
+    if(!isLogged) {
         return res.send("UNAUTHORIZED")
     }
     const tweet = req.body.tweet
