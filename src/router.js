@@ -1,31 +1,23 @@
 import  Express  from "express";
-
+import { validateBodySign, validateBodyTweets } from "./middleware/validateDateMiddleWare.js";
 const routes = Express.Router()
 
 let username, avatar
 const users = []
 const tweets = []
 
-routes.post('/sign-up', (req, res) => {
+routes.post('/sign-up', validateBodySign, (req, res) => {
     username = req.body.username
     avatar = req.body.avatar
     users.push({username, avatar})
-    return res.send("ok")
+    return res.status(201).send({"message": "ok"})
 })
 
-routes.post('/tweets', (req,res) => {
+routes.post('/tweets', validateBodyTweets, (req,res) => {
     username = req.body.username
-
-    const isLogged = users.find( element => 
-        element.username === username
-    )
-
-    if(!isLogged) {
-        return res.send("UNAUTHORIZED")
-    }
     const tweet = req.body.tweet
     tweets.push({username, tweet})
-    return res.send("ok")
+    return res.status(201).send({"message": "ok"})
 
 })
 
@@ -46,5 +38,6 @@ routes.get( '/tweets', ( req, res ) => {
 
 
 export {
-    routes
+    routes, 
+    users
 }
