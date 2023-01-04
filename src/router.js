@@ -20,8 +20,6 @@ routes.post('/tweets', (req,res) => {
         element.username === username
     )
 
-    console.log(isLogged)
-
     if(!isLogged) {
         return res.send("UNAUTHORIZED")
     }
@@ -33,7 +31,7 @@ routes.post('/tweets', (req,res) => {
 
 routes.get( '/tweets', ( req, res ) => {
     const lastTen = []
-    let j = 1
+    let j = 0
 
     for( let i = tweets.length; i > 0; i--){
         username = tweets[i - 1].username
