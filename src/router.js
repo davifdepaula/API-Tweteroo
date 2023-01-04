@@ -15,7 +15,11 @@ routes.post('/sign-up', (req, res) => {
 
 routes.post('/tweets', (req,res) => {
     username = req.body.username
-    if(!username) return res.send("UNAUTHORIZED")
+    if(!users.find( element => {
+        element.username === username
+    })) {
+        return res.send("UNAUTHORIZED")
+    }
     const tweet = req.body.tweet
     tweets.push({username, tweet})
     return res.send("ok")
@@ -24,17 +28,16 @@ routes.post('/tweets', (req,res) => {
 
 routes.get( '/tweets', ( req, res ) => {
     const lastTen = []
-    let maxIndex = tweets.length, j = 0
+    let j = 1
 
-    for( let i = maxIndex; i > 0; i--){
+    for( let i = tweets.length; i > 0; i--){
         username = tweets[i - 1].username
         const tweet = tweets[i - 1].tweet
         avatar = users.find( element => element.username === username ).avatar
         lastTen.push({username, tweet, avatar})
         j += 1
-        if( j === 10) break
-    }    
-
+        if( j === 10 ) break
+    }
     return res.send(lastTen)
 })
 
