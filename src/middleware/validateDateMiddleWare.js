@@ -9,10 +9,10 @@ const validateBodySign = (req, res, next) => {
 }
 
 const validateBodyTweets = (req, res, next) => {
-    if(!req.body.username) return res.status(400).send("Todos os campos são obrigatórios!")
+    if(!res.get("user")) return res.status(400).send("Todos os campos são obrigatórios!")
 
     const isLogged = users.find( element => 
-        element.username === req.body.username
+        element.username === res.get("user")
     )
     if(!isLogged) {
         return res.status(200).send("UNAUTHORIZED")
