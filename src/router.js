@@ -47,9 +47,7 @@ routes.get("/tweets/:username", filterUser, (req, res) => {
             return{ username, avatar, tweet}
         }
     })
-
-    console.log(tweetsUser)
-    
+   
     return res.send(tweetsUser)
 })
 
