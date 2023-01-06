@@ -30,15 +30,20 @@ routes.post('/tweets', validateBodyTweets, (req,res) => {
 })
 
 routes.get( '/tweets', ( req, res ) => {
+    const {page} = req.query
+    if(page < 1) return res.status(400).send("Informe uma página válida!")
     const lastTen = []
     let j = 0
-
-    for( let i = tweets.length; i > 0; i--){
+    
+    let i = tweets.length * page || tweets.length
+    console.log(i)
+    while( (i > 0 || j < 10 ) && tweets[i - 1] !== undefined){
         username = tweets[i - 1].username
         const tweet = tweets[i - 1].tweet
         avatar = users.find( element => element.username === username ).avatar
         lastTen.push({username, tweet, avatar})
         j += 1
+        i -= 1
         if( j === 10 ) break
     }
     return res.send(lastTen)
