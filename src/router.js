@@ -34,9 +34,9 @@ routes.get( '/tweets', ( req, res ) => {
     if(page < 1) return res.status(400).send("Informe uma página válida!")
     const lastTen = []
     let j = 0
-    
-    let i = tweets.length * page || tweets.length
-    console.log(i)
+    let i = tweets.length
+    if(page > 1) i = i - 10*page
+    if( i < 0 ) i = -i
     while( (i > 0 || j < 10 ) && tweets[i - 1] !== undefined){
         username = tweets[i - 1].username
         const tweet = tweets[i - 1].tweet
