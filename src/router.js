@@ -10,7 +10,6 @@ routes.post('/sign-up', validateBodySign, (req, res) => {
     username = req.body.username
     avatar = req.body.avatar
     users.push({username, avatar})
-    res.set("user", `${username}`)
     return res.status(201).send({"message": "ok"})
 })
 
@@ -24,7 +23,6 @@ routes.use('/tweets', (req, res, next) => {
 
 routes.post('/tweets', validateBodyTweets, (req,res) => {
     username = res.get("user")
-    console.log(res.get("user"))
     const tweet = req.body.tweet
     tweets.push({username, tweet})
     return res.status(201).send({"message": "ok"})
