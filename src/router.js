@@ -1,5 +1,5 @@
 import  Express  from "express";
-import { validateBodySign, validateBodyTweets, filterUser } from "./middleware/validateDateMiddleWare.js";
+import { validateBodySign, validateBodyTweets } from "./middleware/validateDateMiddleWare.js";
 const routes = Express.Router()
 
 let username, avatar
@@ -44,8 +44,14 @@ routes.get( '/tweets', ( req, res ) => {
     return res.send(lastTen)
 })
 
-routes.get("/tweets/:username", filterUser, (req, res) => {
+routes.get("/tweets/:username", (req, res) => {
     const {username} = req.params
+
+    const didTweet = users.find( element => 
+        element.username === username
+    )
+    
+    if (!didTweet) return res.send([])
 
     avatar = users.find( element => element.username === username ).avatar
 
@@ -55,7 +61,7 @@ routes.get("/tweets/:username", filterUser, (req, res) => {
             return{ username, avatar, tweet}
         }
     })
-   
+    console.log(tweetsUser)
     return res.status(200).send(tweetsUser)
 })
 
