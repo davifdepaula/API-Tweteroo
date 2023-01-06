@@ -60,13 +60,12 @@ routes.get("/tweets/:username", (req, res) => {
 
     avatar = users.find( element => element.username === username ).avatar
 
-    const tweetsUser = tweets.map(e => {
+    const tweetsUser = tweets.filter(e => {
         if(e.username === username){
             const tweet = e.tweet
             return{ username, avatar, tweet}
         }
     })
-    console.log(tweetsUser)
     return res.status(200).send(tweetsUser)
 })
 
