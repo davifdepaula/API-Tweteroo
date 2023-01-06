@@ -56,7 +56,7 @@ routes.get("/tweets/:username", filterUser, (req, res) => {
         }
     })
    
-    return res.send(tweetsUser)
+    return res.status(200).send(tweetsUser)
 })
 
 

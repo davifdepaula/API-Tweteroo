@@ -28,8 +28,7 @@ const filterUser = (req, res, next) => {
         element.username === req.params.username
     )
     
-    if (!didTweet) res.send([])
-    return 
+    if (!didTweet) return res.send([])
     next()
 }
 
