@@ -45,7 +45,7 @@
 
 ## :dart: Sobre ##
 
-Uma api clone do twitter que permite que o usuário faça login com um nome e um avatar e envie tweets.
+Uma api clone do twitter que permite que o usuário faça login com um nome, um avatar e envie tweets.
 
 ## :sparkles: Caracteristicas ##
 
