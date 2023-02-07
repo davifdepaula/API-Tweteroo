@@ -1,25 +1,25 @@
 <div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="Projeto12 Tweteroo" />
+  <img src="./.github/app.gif" alt="tweteroo" />
 
   &#xa0;
 
   <!-- <a href="https://projeto12tweteroo.netlify.app">Demo</a> -->
 </div>
 
-<h1 align="center">Projeto12 Tweteroo</h1>
+<h1 align="center">Tweteroo</h1>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/{{YOUR_GITHUB_USERNAME}}/projeto12-tweteroo?color=56BEB8">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/davifdepaula/tweteroo?color=56BEB8">
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/{{YOUR_GITHUB_USERNAME}}/projeto12-tweteroo?color=56BEB8">
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/davifdepaula/tweteroo?color=56BEB8">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/{{YOUR_GITHUB_USERNAME}}/projeto12-tweteroo?color=56BEB8">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/davifdepaula/tweteroo?color=56BEB8">
 
-  <img alt="License" src="https://img.shields.io/github/license/{{YOUR_GITHUB_USERNAME}}/projeto12-tweteroo?color=56BEB8">
+  <img alt="License" src="https://img.shields.io/github/license/davifdepaula/tweteroo?color=56BEB8">
 
-  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/{{YOUR_GITHUB_USERNAME}}/projeto12-tweteroo?color=56BEB8" /> -->
+  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/davifdepaula/tweteroo?color=56BEB8" /> -->
 
-  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/{{YOUR_GITHUB_USERNAME}}/projeto12-tweteroo?color=56BEB8" /> -->
+  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/davifdepaula/tweteroo?color=56BEB8" /> -->
 
   <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/{{YOUR_GITHUB_USERNAME}}/projeto12-tweteroo?color=56BEB8" /> -->
 </p>
@@ -33,66 +33,57 @@
 <hr> -->
 
 <p align="center">
-  <a href="#dart-about">About</a> &#xa0; | &#xa0; 
-  <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
-  <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
-  <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
-  <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
-  <a href="#memo-license">License</a> &#xa0; | &#xa0;
-  <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">Author</a>
+  <a href="#dart-about">Sobre</a> &#xa0; | &#xa0; 
+  <a href="#sparkles-features">Caracteristicas</a> &#xa0; | &#xa0;
+  <a href="#rocket-technologies">Tecnologias</a> &#xa0; | &#xa0;
+  <a href="#white_check_mark-requirements">Requerimentos</a> &#xa0; | &#xa0;
+  <a href="#checkered_flag-starting">Iniciar projeto</a> &#xa0; | &#xa0;
+  <a href="https://github.com/davifdepaula" target="_blank">Autor</a>
 </p>
 
 <br>
 
-## :dart: About ##
+## :dart: Sobre ##
 
-Describe your project
+Uma api clone do twitter que permite que o usuário faça login com um nome e um avatar e envie tweets.
 
-## :sparkles: Features ##
+## :sparkles: Caracteristicas ##
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+:heavy_check_mark: Faça login com seu nome de usuario e um avatar;\
+:heavy_check_mark: Faça tweets;\
 
-## :rocket: Technologies ##
 
-The following tools were used in this project:
+## :rocket: Tecnologias ##
 
-- [Expo](https://expo.io/)
+As seguintes ferramentas foram usadas nesse projeto:
+
 - [Node.js](https://nodejs.org/en/)
-- [React](https://pt-br.reactjs.org/)
-- [React Native](https://reactnative.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
 
-## :white_check_mark: Requirements ##
+## :white_check_mark: Requerimentos ##
 
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
+Antes de iniciar você precisa ter :checkered_flag: [Git](https://git-scm.com) e [Node](https://nodejs.org/en/) instalados.
 
-## :checkered_flag: Starting ##
+## :checkered_flag: Iniciando projeto ##
 
 ```bash
 # Clone this project
-$ git clone https://github.com/{{YOUR_GITHUB_USERNAME}}/projeto12-tweteroo
+$ git clone https://github.com/davifdepaula/tweteroo
 
 # Access
-$ cd projeto12-tweteroo
+$ cd tweteroo
 
 # Install dependencies
-$ yarn
+$ node install 
 
 # Run the project
-$ yarn start
+$ node start
 
 # The server will initialize in the <http://localhost:3000>
 ```
 
-## :memo: License ##
 
-This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
-
-
-Made with :heart: by <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">{{YOUR_NAME}}</a>
+Feito com :heart: by <a href="https://github.com/davifdepaula" target="_blank">Davi Ferreira de Paula</a>
 
 &#xa0;
 
-<a href="#top">Back to top</a>
+<a href="#top">Voltar para o topo</a>
