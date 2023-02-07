@@ -50,7 +50,7 @@ Uma api clone do twitter que permite que o usuário faça login com um nome, um 
 ## :sparkles: Caracteristicas ##
 
 :heavy_check_mark: Faça login com seu nome de usuario e um avatar;\
-:heavy_check_mark: Faça tweets;\
+:heavy_check_mark: Faça tweets;
 
 
 ## :rocket: Tecnologias ##
